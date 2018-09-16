@@ -1,0 +1,205 @@
+/* начало стилей для фона и общего размера страницы*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.background {
+  background: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url("images/background.jpg") no-repeat;
+  background-size: cover;
+  font-weight: 300;
+  color: #555;
+  height: 100vh;
+  font-family: Lato;
+
+}
+
+.las-vegas-wrapper {
+  width: 12%;
+  min-width: 110px;
+  max-width: 140px;
+  margin: 0 auto;
+}
+
+.las-vegas {
+  width: 100%;
+}
+/* конец стилей для фона и общего размера страницы*/
+
+/* начало стилей для игрового поля */
+.game-board {
+  position: relative;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  background-color: rgb(245, 237, 249);
+  box-shadow: 0px 10px 50px 5px rgba(0,0,0,0.7);
+}
+/* конец стилей для игрового поля */
+/* начало стилей для интерфейса игроков */
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.panel {
+  padding-top: 30px;
+  width: 50%;
+  height: 450px;
+}
+
+.btn-new {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 30%);
+}
+
+.active {
+  background-color: rgba(249, 237, 129, 0.77);
+}
+
+.active .player-name {
+  font-weight: 300;
+}
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 40px;
+    color: #EB4D4D;
+}
+
+/* начало стилей для имен игроков */
+.player-name {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.type-name {
+  max-width: 90%;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  border: none;
+  font-family: inherit;
+  background-color: inherit;
+  color: inherit;
+}
+/* конец стилей для имен игроков */
+
+/* начало стилей для общего количества очков  */
+.total-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 200;
+    color: #EB4D4D;
+    margin-bottom: 130px;
+}
+/* конец стилей для общего количества очков */
+
+/* начало стилей для текущего количества очков */
+.current-box {
+    background-color: #EB4D4D;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+    height: 85px;
+}
+
+.current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #222;
+}
+
+.current-score {
+    font-size: 30px;
+}
+/* конец стилей для текущего количества очков */
+
+/* начало стилей для кнопок */
+.btn-wrapper {
+  height: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  transform: translateX(-50%);
+}
+
+button {
+    width: 200px;
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+i {
+    color: #EB4D4D;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+
+button:hover {
+  font-weight: 600;
+}
+
+button:hover i {
+  margin-right: 20px;
+}
+
+button:focus {
+    outline: none;
+}
+/* конец стилей для нижних кнопок */
+
+/* начало стилей для костей */
+.dice {
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+/* конец стилей для костей */
+
+/* начало стилей для победителя */
+.winner {
+  background-color: #f7f7f7;
+}
+
+.winner .player-name {
+  font-weight: 300; color: #EB4D4D;
+}
+/* конец стилей для победителя */
+/* конец стилей для интерфейса игроков */
+
+/* Начало стилей для игрового поля при ширине экрана меньше 690px */
+@media (max-width: 690px) {
+  .game-board {
+    width: 483px;
+  }
+}
+/* Конец стилей для игрового поля при ширине экрана меньше 690px */

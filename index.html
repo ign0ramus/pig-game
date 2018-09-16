@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+
+    <title>Pig Dice Game</title>
+  </head>
+  <body class="background">
+    <div class="las-vegas-wrapper">
+      <img src="images/las-vegas.png" alt="Las Vegas Logo" class="las-vegas">
+    </div>
+    <div class="game-board">
+      <button type="button" name="button" class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+
+      <div class="wrapper">
+        <div class="player-1 panel active">
+          <div class="player-name"><input type="text" value="Player 2"class="type-name" maxlength="12"></input></div>
+          <div class="total-score">0</div>
+          <div class="current-box">
+            <div class="current-label">Current</div>
+            <div class="current-score">0</div>
+          </div>
+        </div>
+
+        <div class="player-2 panel">
+          <div class="player-name"><input type="text" value="Player 2"class="type-name" maxlength="12"></input></div>
+          <div class="total-score">0</div>
+          <div class="current-box">
+            <div class="current-label">Current</div>
+            <div class="current-score">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-wrapper">
+        <button type="button" name="button" class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+        <button type="button" name="button" class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+      </div>
+
+      <img src="" alt="Dice" class="dice">
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
