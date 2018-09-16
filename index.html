@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
-
     <title>Pig Dice Game</title>
   </head>
   <body class="background">
@@ -13,34 +12,70 @@
       <img src="images/las-vegas.png" alt="Las Vegas Logo" class="las-vegas">
     </div>
     <div class="game-board">
-      <button type="button" name="button" class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+      <button type="button" name="button" class="btn-new in-game" id="new-game"><i class="ion-ios-plus-outline"></i><span class="label hide">New game</span>
+      <span class="label">Новая игра</span></button>
+      <button type="button" name="button" class="btn-info in-game" id="rules"><i class="ion-ios-information-outline"></i><span class="label hide">Rules</span>
+      <span class="label">Правила</span></button>
 
       <div class="wrapper">
         <div class="player-1 panel active">
-          <div class="player-name"><input type="text" value="Player 2"class="type-name" maxlength="12"></input></div>
+          <div class="player-name"><input type="text" value="Игрок 1" class="type-name" id="player1" maxlength="12"></input></div>
           <div class="total-score">0</div>
           <div class="current-box">
-            <div class="current-label">Current</div>
+            <div class="current-label"><span class="label hide">Current</span><span class="label">Текущий ход</span></div>
             <div class="current-score">0</div>
           </div>
         </div>
 
         <div class="player-2 panel">
-          <div class="player-name"><input type="text" value="Player 2"class="type-name" maxlength="12"></input></div>
+          <div class="player-name"><input type="text" value="Игрок 2"class="type-name" maxlength="12" id="player2"></input></div>
           <div class="total-score">0</div>
           <div class="current-box">
-            <div class="current-label">Current</div>
+            <div class="current-label"><span class="label hide">Current</span><span class="label">Текущий ход</span></div>
             <div class="current-score">0</div>
           </div>
         </div>
       </div>
 
       <div class="btn-wrapper">
-        <button type="button" name="button" class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
-        <button type="button" name="button" class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+        <button type="button" name="button" class="btn-roll in-game"><i class="ion-ios-loop"></i><span class="label hide">Roll dice</span class="label"><span class="label">Бросить кубик</span></button>
+        <button type="button" name="button" class="btn-hold in-game"><i class="ion-ios-download-outline"></i><span class="label  hide">Hold</span><span class="label">Закончить ход</span></button>
       </div>
       <img src="" alt="Dice" class="dice">
+
+      <div class="welcome" id="welcome-div">
+        <div class="welcome-text">
+          <h1 class="title">Игра в кости.</h1>
+            <p>Правила:<br>
+            На каждый ход игрок бросает кости до тех пор, пока не выпадет 1 или игрок не решит "удержать" текущий счет броска и добавить его к общему счету.</p>
+            <p>Если у игрока выпало 1, то его счет текущего броска равен 0, и очередь переходит к другому игроку.</p>
+            <p>Если у игрока выпало любое другое число, то оно добавляется в его текущий счет броска и его ход продолжается.</p>
+            <p>Если игрок выбирает "удержать" текущий счет, то счет текущего броска добавляется в общий счет и очередь переходит к другому игроку.</p>
+            <p class="last"> Первый игрок, который набрал 100 или более побеждает.</p>
+            <button type="button" name="button" class="ok" tabindex="1">ОК</button>
+            <button type="button" name="button" class="lang" tabindex="2">English</button>
+        </div>
+        <div class="welcome-text hide">
+          <h1 class="title">Pig Dice Game.</h1>
+          <p>
+            Rules: Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold": If the player rolls a 1, they score nothing and it becomes the next player's turn.
+          </p>
+          <p>
+            If the player rolls any other number, it is added to their turn total and the player's turn continues.
+          </p>
+          <p>
+            If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
+          </p>
+          <p class="last">The first player to score 100 or more points wins.</p>
+          <button type="button" name="button" class="ok" tabindex="1">ОК</button>
+          <button type="button" name="button" class="lang" tabindex="2">Русский</button>
+        </div>
+      </div>
     </div>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
