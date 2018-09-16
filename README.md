@@ -10,8 +10,7 @@ The first player to score 100 or more points wins.
 
 <a href="https://en.wikipedia.org/wiki/Pig_(dice_game)">See this on wikipedia</a>
 
-Игра в кости.
-Простая игра в кости.
+Игра в кости. 
 
 Правила: 
 На каждый ход игрок бросает кости до тех пор, пока не выпадет 1 или игрок не решит "удержать" текущий счет броска и добавить его к общему счету.
