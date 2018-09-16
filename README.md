@@ -20,3 +20,9 @@ The first player to score 100 or more points wins.
 Первый игрок, который набрал 100 или более побеждает.
 
 <a href="https://en.wikipedia.org/wiki/Pig_(dice_game)">Ссылка на википедию</a>
+
+
+//TO DO
+1) HTML & CSS - done;
+2) JS logic - in progress;
+3) Bot for playing;
