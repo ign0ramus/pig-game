@@ -10,7 +10,7 @@ The first player to score 100 or more points wins.
 
 <a href="https://en.wikipedia.org/wiki/Pig_(dice_game)">See this on wikipedia</a>
 
-#Игра в кости
+Игра в кости
 Простая игра в кости.
 
 Правила: 
