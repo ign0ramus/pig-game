@@ -24,5 +24,5 @@ The first player to score 100 or more points wins.
 
 //TO DO
 1) HTML & CSS - done;
-2) JS logic - in progress;
-3) Bot for playing;
+2) JS logic - done;
+3) Bot for playing - in progress;
