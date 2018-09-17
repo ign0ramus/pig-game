@@ -9,7 +9,7 @@ $(() => {
   $(".lang").click(toggleHide(".label"));
   $(".lang").click(toggleHide($("#welcome-div").children()));
   $(".lang").click(() => {
-    // меняет дефолтное имя игрока в соответствии с выбранным языком
+    // устанавливает дефолтное имя игрока в соответствии с выбранным языком
     const player1 = $("#player1");
     const player2 = $("#player2");
     if ( player1.val() === "Игрок 1" && player2.val() === "Игрок 2") {
@@ -22,7 +22,8 @@ $(() => {
   });
 
   $("#roll").click(() => {
-    // обрабатывает бросок кости, становится доступным удержание счета
+    /* обрабатывается бросок кости и все связанные процессы в счете,
+    становится доступным удержание счета */
     const valToInt = (selector) => Number.parseInt($(selector).text());
     const showDice = () => {
       $("#dice-img").attr("src", "images/dice-" + diceSide.toString() + ".png").removeClass("hide");
