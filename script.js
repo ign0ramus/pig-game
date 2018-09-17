@@ -23,8 +23,6 @@ $(() => {
 
   $("#roll").click(() => {
     // обрабатывает бросок кости, становится доступным удержание счета
-
-    event.stopImmediatePropagation(event);
     const valToInt = (selector) => Number.parseInt($(selector).text());
     const showDice = () => {
       $("#dice-img").attr("src", "images/dice-" + diceSide.toString() + ".png").removeClass("hide");
