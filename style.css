@@ -183,7 +183,6 @@ i {
 
 /* начало стилей для костей */
 .dice {
-    visibility: hidden;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -194,12 +193,16 @@ i {
 /* конец стилей для костей */
 
 /* начало стилей для победителя */
-.winner {
-  background-color: rgba(249, 237, 129, 0.77);
-}
 
 .winner .player-name {
   font-weight: 300; color: #EB4D4D;
+}
+
+p.label {
+  text-align: center;
+  width: 50%;
+  position: absolute;
+  font-size: 55px;
 }
 /* конец стилей для победителя */
 
@@ -264,7 +267,7 @@ i {
 
 }
 
-.hide {
+.hide, .winner-text-hide {
   display: none;
 }
 /* конец стилей для приветственного блока */
