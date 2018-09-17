@@ -72,12 +72,12 @@ $(() => {
     changeText(".player-1 .current-box .current-score", 0);
     changeText(".player-2 .total-score span", 0);
     changeText(".player-2 .current-box .current-score", 0);
+    $(".active .win").addClass("winner-text-hide");
     if ($(".player-2").hasClass("active")) {
       $(".panel").toggleClass("active");
     }
     if (!$("#dice-img").hasClass("hide")) {
       $("#dice-img").addClass("hide");
     }
-    $(".active .win").addClass("winner-text-hide");
   });
 });
