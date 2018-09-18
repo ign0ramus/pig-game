@@ -1,8 +1,7 @@
 $(() => {
   const toggleHide = (selector) => () => $(selector).toggleClass("hide");
-  const changeText = (selector, newtext) => {
-    $(selector).text(newtext);
-  };
+  const changeText = (selector, newtext) => $(selector).text(newtext);
+  const toggleActivePlayer = () => $(".panel").toggleClass("active");
 
   $(".ok").click(toggleHide("#welcome-div"));
   $("#rules").click(toggleHide("#welcome-div"));
@@ -22,7 +21,6 @@ $(() => {
     /* обрабатывается бросок кости и все связанные процессы в счете,
     становится доступным удержание счета */
     const valToInt = (selector) => Number.parseInt($(selector).text());
-    const toggleActivePlayer = () => $(".panel").toggleClass("active");
     const offHoldBtn = () => $("#hold").off("click");
     let totalScoreSelector = ".active .total-score span";
     let currentScoreSelector = ".active .current-box .current-score";
@@ -32,8 +30,7 @@ $(() => {
     if (totalScore < 100) {
       $("#dice-img").attr("src", "images/dice-" + diceSide + ".png").removeClass("hide");
       if (diceSide !== 1) {
-        let currentScore= valToInt(currentScoreSelector);
-        currentScore += diceSide;
+        let currentScore= valToInt(currentScoreSelector) + diceSide;
         changeText(currentScoreSelector, currentScore);
 
         $("#hold").click((event) => {
@@ -41,11 +38,7 @@ $(() => {
           totalScore += valToInt(currentScoreSelector);
           changeText(currentScoreSelector, 0);
           changeText(totalScoreSelector, totalScore);
-          if (totalScore >= 100) {
-            $(".active .win").removeClass("winner-text-hide");
-          } else {
-            toggleActivePlayer();
-          }
+          totalScore >= 100 ? $(".active .win").removeClass("winner-text-hide") : toggleActivePlayer();
           $("#dice-img").addClass("hide");
           offHoldBtn();
         });
@@ -63,7 +56,7 @@ $(() => {
       changeText(".player-" + i + " .current-box .current-score", 0);
     }
     $(".active .win").addClass("winner-text-hide");
-    $(".player-2").hasClass("active") ? $(".panel").toggleClass("active") : 0;
     $("#dice-img").addClass("hide");
+    $(".player-2").hasClass("active") ? toggleActivePlayer() : 0;
   });
 });
