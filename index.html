@@ -20,7 +20,7 @@
       <div class="wrapper">
 
         <div class="player-1 panel active">
-          <div class="player-name"><input type="text" value="Игрок 1" class="type-name" id="player1" maxlength="12"></input></div>
+          <div class="player-name"><input type="text" value="Игрок 1" class="type-name" maxlength="12" id="player1"></input></div>
           <div class="total-score"><span>0</span><p class="label winner-text-hide win">Победитель!</p><p class="label hide winner-text-hide win">Winner!</p> </div>
           <div class="current-box">
             <div class="current-label"><span class="label hide">Current</span><span class="label">Текущий ход</span></div>
@@ -29,7 +29,7 @@
         </div>
 
         <div class="player-2 panel">
-          <div class="player-name"><input type="text" value="Игрок 2"class="type-name" maxlength="12" id="player2"></input></div>
+          <div class="player-name"><input type="text" value="Игрок 2" class="type-name" maxlength="12" id="player2"></input></div>
           <div class="total-score"><span>0</span><p class="label winner-text-hide win">Победитель!</p><p class="label hide winner-text-hide win">Winner!</p>
           </div>
           <div class="current-box">
@@ -40,8 +40,10 @@
       </div>
 
       <div class="btn-wrapper">
-        <button type="button" name="button" class="btn-roll in-game" id="roll"><i class="ion-ios-loop"></i><span class="label hide">Roll dice</span class="label"><span class="label">Бросить кубик</span></button>
-        <button type="button" name="button" class="btn-hold in-game" id="hold"><i class="ion-ios-download-outline"></i><span class="label  hide">Hold</span><span class="label">Удержать счет</span></button>
+          <p class="label unlucky roll-close hide">Unlucky! It's 1!</p>
+        <p class="label unlucky roll-close">Неудача! Выпало 1!</p>
+        <button type="button" class="btn-roll in-game"i id="roll"><i class="ion-ios-loop"></i><span class="label hide">Roll dice</span class="label"><span class="label">Бросить кубик</span></button>
+        <button type="button" class="btn-hold in-game" id="hold"><i class="ion-ios-download-outline"></i><span class="label  hide">Finish turn</span><span class="label">Закончить ход</span></button>
       </div>
 
       <img src="" alt="Dice" class="dice hide" id="dice-img">

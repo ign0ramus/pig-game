@@ -59,9 +59,8 @@
 
 .btn-info {
   position: absolute;
-  right: -30px;
   transform: translateY(30%);
-
+  right: 0;
 }
 
 .active {
@@ -134,9 +133,11 @@
 
 /* начало стилей для кнопок */
 .btn-wrapper {
+  width: 30%;
   height: 85px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   position: absolute;
   left: 50%;
@@ -145,12 +146,11 @@
 }
 
 .in-game {
-    width: 200px;
     color: #555;
     background: none;
     border: none;
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: 1.6vw;
     text-transform: uppercase;
     cursor: pointer;
     font-weight: 300;
@@ -161,7 +161,7 @@ i {
     color: #EB4D4D;
     display: inline-block;
     margin-right: 15px;
-    font-size: 32px;
+    font-size: 3.4vw;
     line-height: 1;
     vertical-align: text-top;
     margin-top: -4px;
@@ -178,6 +178,12 @@ i {
 
 .in-game:focus {
     outline: none;
+}
+
+.unlucky {
+  font-size: 2vw;
+  color: #EB4D4D;
+  background-color: wheat;
 }
 /* конец стилей для нижних кнопок */
 
@@ -197,7 +203,7 @@ i {
   font-weight: 300; color: #EB4D4D;
 }
 
-p.label {
+.total-score p.label {
   text-align: center;
   width: 50%;
   position: absolute;
@@ -266,7 +272,7 @@ p.label {
 
 }
 
-.hide, .winner-text-hide {
+.hide, .winner-text-hide, .roll-close {
   display: none;
 }
 /* конец стилей для приветственного блока */
@@ -276,6 +282,15 @@ p.label {
 @media (max-width: 690px) {
   .game-board {
     width: 483px;
+  }
+  .unlucky {
+    font-size: 14px;
+  }
+  .in-game {
+    font-size: 10px;
+  }
+  i {
+    font-size: 30px;
   }
 }
 @media (max-width: 500px) {
