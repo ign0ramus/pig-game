@@ -150,7 +150,7 @@
     background: none;
     border: none;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.6vw;
+    font-size: 1.4vw;
     text-transform: uppercase;
     cursor: pointer;
     font-weight: 300;
@@ -161,7 +161,7 @@ i {
     color: #EB4D4D;
     display: inline-block;
     margin-right: 15px;
-    font-size: 3.4vw;
+    font-size: 40px;
     line-height: 1;
     vertical-align: text-top;
     margin-top: -4px;
