@@ -187,14 +187,61 @@ i {
 }
 /* конец стилей для нижних кнопок */
 
-/* начало стилей для костей */
+/* начало стилей для костей - 3D*/
+.dice-3d {
+  transform: scale(.4);
+  perspective: 600px;
+  perspective-origin: 50% 50%;
+  position: absolute;
+  left: 35%;
+  top: 25%;
+}
+
+.cube {
+  margin: auto;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+}
+
+.dice img {
+  width: 100%;
+}
+
 .dice {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -60%);
-    height: 100px;
-    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+  position: absolute;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%; 
+}
+
+.one {
+    transform: translateZ(100px);
+}
+
+.six {
+  transform: translateZ(-100px) rotateY(180deg);
+}
+
+.four {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+}
+
+.three {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+}
+
+.two {
+  transform: rotateX(-270deg) translateY(-100px);
+  transform-origin: top center;
+}
+
+.five {
+  transform: rotateX(270deg) translateY(100px);
+  transform-origin: bottom center;
 }
 /* конец стилей для костей */
 
