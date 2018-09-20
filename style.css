@@ -60,7 +60,7 @@
 .btn-info {
   position: absolute;
   transform: translateY(30%);
-  right: 0;
+  right: 5%;
 }
 
 .active {
@@ -357,9 +357,6 @@ i {
     width: 60%;
     height: auto;
   }
-  .current-box *{
-    font-size: 20px;
-  }
   .type-name {
     margin-top: 10%;
     font-size: 50px;
@@ -391,5 +388,11 @@ i {
   .current-score {
     font-size: 40px;
   }
-}
+  .welcome {
+    font-size: 25px;
+  }
+  .welcome-text-button {
+    width: 150px;
+    font-size: 15px;
+  }
 /* Конец стилей для медиа запросов */
