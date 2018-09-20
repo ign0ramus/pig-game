@@ -325,7 +325,7 @@ i {
 /* конец стилей для приветственного блока */
 /* конец стилей для интерфейса игроков */
 
-/* Начало стилей для игрового поля при ширине экрана меньше 690px */
+/* Начало стилей для медиа запросов */
 @media (max-width: 690px) {
   .game-board {
     width: 483px;
@@ -345,4 +345,48 @@ i {
     margin: 0 191px;
   }
 }
-/* Конец стилей для игрового поля при ширине экрана меньше 690px */
+@media screen and (orientation: portrait) and (min-device-width : 320px) and (max-device-width : 700px) {
+  .panel {
+   max-height: 65vh;
+  }
+  .total-score {
+    margin-bottom: 28vh;
+    font-size: 8vh;
+  }
+  .current-box {
+    width: 60%;
+    height: auto;
+  }
+  .current-box *{
+    font-size: 20px;
+  }
+  .type-name {
+    margin-top: 10%;
+    font-size: 50px;
+  }
+  .dice-3d {
+    transform: translate(-50%, -70%) scale(.7);
+  }
+  .btn-wrapper {
+    height: auto;
+    width: 50%;
+    top: 36vh;
+  }
+  .label {
+    width: 100%;
+    font-size: 30px;
+  }
+  i {
+    font-size: 55px;
+  }
+  .btn-new {
+    left: 25%;
+  }
+  .btn-info {
+    right: 10%;
+  }
+  .in-game {
+    display: flex;
+  }
+}
+/* Конец стилей для медиа запросов */
