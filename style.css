@@ -60,7 +60,7 @@
 .btn-info {
   position: absolute;
   transform: translateY(30%);
-  right: 0;
+  right: 5%;
 }
 
 .active {
@@ -389,10 +389,10 @@ i {
     font-size: 40px;
   }
   .welcome {
-    font-size: 30px;
+    font-size: 25px;
   }
   .welcome-text-button {
     width: 150px;
-    font-size: 17px;
+    font-size: 15px;
   }
 /* Конец стилей для медиа запросов */
