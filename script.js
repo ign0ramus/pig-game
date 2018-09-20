@@ -30,6 +30,7 @@ $(() => {
       let directY = 360;
       switch(diceSide) {
         case 1: 
+            directX += 360;
             break; 
         case 2: 
             directX += 270;
@@ -48,12 +49,12 @@ $(() => {
                 directY += 270;
                 break;
       }
+      setTimeout(() => {
+        $(".cube").css({"transition" : "transform 3s cubic-bezier(.01,.27,.56,.98)","transform" : "rotateX(" + directX + "deg) rotateY(" + directY + "deg)"});
+      }, 30);
       $(".cube").css({"transition" : "none","transform" : "rotateX(0deg) rotateY(0deg)"});
       $("#roll").css({"pointer-events" : "none"});
       $("#hold").css({"pointer-events" : "none"});
-      setTimeout(() => {
-        $(".cube").css({"transition" : "transform 3s cubic-bezier(.01,.27,.56,.98)","transform" : "rotateX(" + directX + "deg) rotateY(" + directY + "deg)"});
-      }, 1);
       let timerRollClick = setTimeout(() => $("#roll").css({"pointer-events" : "auto"}), timer);
       timersArray.push(timerRollClick);
       let timerHoldClick = setTimeout(() => $("#hold").css({"pointer-events" : "auto"}), timer);
