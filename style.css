@@ -388,5 +388,8 @@ i {
   .in-game {
     display: flex;
   }
+  .current-score {
+    font-size: 40px;
+  }
 }
 /* Конец стилей для медиа запросов */
