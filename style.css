@@ -357,9 +357,6 @@ i {
     width: 60%;
     height: auto;
   }
-  .current-box *{
-    font-size: 20px;
-  }
   .type-name {
     margin-top: 10%;
     font-size: 50px;
