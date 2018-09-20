@@ -26,8 +26,8 @@ $(() => {
     let diceSide = Math.floor(Math.random() * 6) + 1;
     let timer = 3200;
     const rotateDice = (diceSide) => {
-      let directX = 360;
-      let directY = 360;
+      let directX = 720;
+      let directY = 720;
       switch(diceSide) {
         case 1: 
             directX += 360;
