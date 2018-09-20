@@ -388,5 +388,11 @@ i {
   .current-score {
     font-size: 40px;
   }
-}
+  .welcome {
+    font-size: 30px;
+  }
+  .welcome-text-button {
+    width: 150px;
+    font-size: 17px;
+  }
 /* Конец стилей для медиа запросов */
