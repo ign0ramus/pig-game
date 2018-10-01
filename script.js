@@ -22,7 +22,7 @@ $(() => {
       roll: "#roll",
       hold: "#hold",
       activeWinner: ".active .win",
-      hideWinTxt: "winner-text-hide",
+      hideWinTxt: "winner_text_hide",
       unluckyDiv: ".unlucky",
       closeRollBtn: "roll_close",
       newGameBtn: "#new_game"
