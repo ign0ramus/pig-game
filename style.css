@@ -1,196 +1,193 @@
-/* начало стилей для фона и общего размера страницы*/
+/**********************************************
+        Начало общих стилей и фона
+**********************************************/
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font: 100%/1.5em 'Montserrat', sans-serif;
 }
 
 .background {
   background: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url("images/background.jpg") no-repeat;
   background-size: cover;
-  font-weight: 300;
-  color: #555;
   height: 100vh;
-  font-family: 'Montserrat', sans-serif;
 }
 
-.background__wrapper {
-  width: 12%;
-  min-width: 110px;
-  max-width: 140px;
-  margin: 0 auto;
+.las-vegas_logo {
+  height: 15vh;
+  text-align: center;
+  margin-bottom: 1%;
 }
 
-.las-vegas {
-  width: 100%;
+.las-vegas_logo img {
+  max-height: 100%;
+  width: auto;
 }
-/* конец стилей для фона и общего размера страницы*/
+/**********************************************
+        Конец общих стилей и фона
+**********************************************/
 
-/* начало стилей для игрового поля */
-.game-board {
+/**********************************************
+        Начало стилей для игрового поля
+**********************************************/
+.gameboard {
   position: relative;
   text-align: center;
-  width: 70%;
+  width: 80%;
+  height: 70vh;
   margin: 0 auto;
   background-color: rgb(245, 237, 249);
-  box-shadow: 0px 10px 50px 5px rgba(0,0,0,0.7);
+  box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.3);
 }
-/* конец стилей для игрового поля */
-/* начало стилей для интерфейса игроков */
-.wrapper {
+/**********************************************
+        Конец стилей для игрового поля
+**********************************************/
+
+/**********************************************
+        Начало стилей для интерфейса игроков
+**********************************************/
+.top_btn_wrapper {
+  position: absolute;
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.panel_wrapper {
+  height: 100%;
+  display: flex;
 }
 
 .panel {
-  padding-top: 30px;
+  padding-top: 5vh;
   width: 50%;
-  height: 60vh;
-  min-height: 450px;
-  max-height: 470px;
-}
-
-.btn-new {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 30%);
-}
-
-.btn-info {
-  position: absolute;
-  transform: translateY(30%);
-  right: 5%;
+  height: 100%;
 }
 
 .active {
   background-color: rgba(249, 237, 129, 0.77);
 }
+/**********************************************
+        Конец стилей для интерфейса игроков
+**********************************************/
 
-.active .player-name {
-  font-weight: 300;
-}
-
-.active .player-name::after {
-    content: "\2022";
-    font-size: 40px;
-    color: #EB4D4D;
-}
-
-/* начало стилей для имен игроков */
-.player-name {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    position: relative;
-}
-
-.type-name {
-  max-width: 90%;
-  font-size: 40px;
+/**********************************************
+        Начало стилей для имен игроков
+**********************************************/
+.type_name {
   text-align: center;
+  width: 80%;
+  font-size: 4vw;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 300;
   border: none;
-  font-family: inherit;
   background-color: inherit;
-  color: inherit;
 }
-/* конец стилей для имен игроков */
 
-/* начало стилей для общего количества очков  */
-.total-score {
+.active .player_name::after {
+  content: "\2022";
+  font-size: 2em;
+  color: #EB4D4D;
+}
+/**********************************************
+        Конец стилей для имен игроков
+**********************************************/
+
+/**********************************************
+Начало стилей для общего количества очков игрока
+**********************************************/
+.total_score {
     text-align: center;
-    font-size: 80px;
-    font-weight: 200;
+    font-size: 5em;
     color: #EB4D4D;
-    margin-bottom: 130px;
+    margin-bottom: 10vh;
+    position: relative;
 }
-/* конец стилей для общего количества очков */
+/**********************************************
+Конец стилей для общего количества очков игрока
+**********************************************/
 
-/* начало стилей для текущего количества очков */
-.current-box {
+
+/**********************************************
+Начало стилей для текущего количества очков игрока
+**********************************************/
+.current_box {
     background-color: #EB4D4D;
     color: #fff;
     width: 40%;
     margin: 0 auto;
-    padding: 12px;
     text-align: center;
-    height: 85px;
 }
 
-.current-label {
+.current_label {
     text-transform: uppercase;
-    margin-bottom: 10px;
-    font-size: 12px;
+    font-size: 0.7em;
     color: #222;
 }
 
-.current-score {
-    font-size: 30px;
+.current_score {
+    font-size: 2em;
 }
-/* конец стилей для текущего количества очков */
+/**********************************************
+Конец стилей для текущего количества очков игрока
+**********************************************/
 
-/* начало стилей для кнопок */
-.btn-wrapper {
-  width: 30%;
-  height: 85px;
+
+/**********************************************
+          Начало стилей для кнопок
+**********************************************/
+.bottom_btn_wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   position: absolute;
+  bottom: 0;
   left: 50%;
-  top: 334px;
   transform: translateX(-50%);
+  margin: 1% 0;
 }
 
-.in-game {
+.button {
     color: #555;
     background: none;
     border: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.4vw;
     text-transform: uppercase;
     cursor: pointer;
-    font-weight: 300;
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 i {
     color: #EB4D4D;
-    display: inline-block;
-    margin-right: 15px;
-    font-size: 40px;
+    font-size: 5vh;
+    margin-right: 5px;
     line-height: 1;
-    vertical-align: text-top;
-    margin-top: -4px;
-    transition: margin 0.3s;
 }
 
-.in-game:hover {
+.button:hover {
   font-weight: 600;
 }
 
-.in-game:hover i {
-  margin-right: 20px;
-}
-
-.in-game:focus {
-    outline: none;
-}
-
 .unlucky {
-  font-size: 2vw;
+  font-size: 1em;
   color: #EB4D4D;
   background-color: wheat;
 }
-/* конец стилей для нижних кнопок */
+.btn_hold {
+  margin-top: 10%;
+}
+/**********************************************
+          Конец стилей для кнопок
+**********************************************/
 
-/* начало стилей для костей - 3D*/
+/**********************************************
+        Начало стилей для костей - 3D
+**********************************************/
 .dice-3d {
   transform: translate(-50%, -50%) scale(.4);
-  perspective: 600px;
+  perspective: 900px;
   left: 50%;
   top: 50%;
   perspective-origin: 50% 50%;
@@ -243,56 +240,58 @@ i {
   transform: rotateX(270deg) translateY(100px);
   transform-origin: bottom center;
 }
-/* конец стилей для костей */
+/**********************************************
+        Конец стилей для костей - 3D
+**********************************************/
 
-/* начало стилей для победителя */
-.winner .player-name {
-  font-weight: 300; color: #EB4D4D;
-}
-
-.total-score p.label {
-  text-align: center;
-  width: 50%;
+/**********************************************
+        Начало стилей для победителя
+**********************************************/
+.win {
+  font-size: 4vw;
+  font-weight: 300; 
+  color: #EB4D4D;
   position: absolute;
-  font-size: 55px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-/* конец стилей для победителя */
+/**********************************************
+        Конец стилей для победителя
+**********************************************/
 
-/* начало стилей для приветственного блока */
+/**********************************************
+    Начало стилей для приветственного блока
+**********************************************/
 .welcome {
   text-align: left;
   position: absolute;
   background-color: #DCDCDC;
   border-radius: 10px;
-  width: 95%;
-  min-width: 450px;
+  width: 90%;
   height: 90%;
-  top: 5%;
-  left: 2.5%;
-  font-size: 14px;
-  box-shadow: 0px 10px 50px 5px rgba(0,0,0,0.7);
+  font-size: 0.7em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.3);
   color: black;
 }
 
 .title {
   text-align: center;
-  font-weight: 300;
+  font-weight: bold;
 }
 
-.welcome-text {
-  padding: 15px;
+.welcome_text {
+  padding: 2%;
 }
 
-.welcome-text p {
-  margin: 10px 0;
-}
-
-.welcome-text button {
+.welcome_text button {
+  cursor: pointer;
   display: block;
-  margin: 10px auto 0;
-  width: 100px;
+  margin: 5% auto 0;
+  width: 85px;
   height: 45px;
-  line-height: 45px;
   border-radius: 45px;
   font-size: 11px;
   text-transform: uppercase;
@@ -304,105 +303,64 @@ i {
   transition: .3s;
   border: none;
 }
-.welcome-text button:hover {
+.welcome_text button:hover {
   background: #eb6e58;
   box-shadow: 0 15px 20px rgb(236, 141, 118);
   color: white;
   transform: translateY(-2px);
 }
-
-.lang {
-  width: auto;
-  position: absolute;
-  left: 10px;
-  bottom: 30px;
-
-}
-
-.hide, .winner-text-hide, .roll-close {
+/**********************************************
+    Конец стилей для приветственного блока
+**********************************************/
+/* Спрятать ненужные блоки */
+.hide, .winner_texthide, .roll_close {
   display: none;
 }
-/* конец стилей для приветственного блока */
-/* конец стилей для интерфейса игроков */
+
 
 /* Начало стилей для медиа запросов */
-@media (max-width: 690px) {
-  .game-board {
-    width: 483px;
+@media (max-width : 760px) {
+  .current_box {
+    width: 70%;
   }
-  .unlucky {
-    font-size: 14px;
+} 
+@media only screen and (orientation: portrait) and (max-width : 700px) {
+
+  .total_score {
+    font-size: 3em;
+    margin-bottom: 20vh;
   }
-  .in-game {
-    font-size: 10px;
+
+  .current_label {
+    font-size: 0.5em;
   }
+
+  .current_box {
+    width: 70%;
+  }
+
+  .current_score {
+    font-size: 1em;
+  }
+
+  .button {
+    font-size: 0.5em;
+  }
+
   i {
-    font-size: 30px;
+    font-size: 3em;
   }
-}
-@media (max-width: 500px) {
-  .las-vegas-wrapper {
-    margin: 0 191px;
+
+  .active .player_name::after {
+    font-size: 1em;
   }
-}
-@media screen and (orientation: portrait) and (min-device-width : 320px) and (max-device-width : 700px) {
-  .panel {
-   max-height: 65vh;
-  }
-  .total-score {
-    margin-bottom: 28vh;
-    font-size: 8vh;
-  }
-  .current-box {
-    width: 60%;
-    height: auto;
-  }
-  .type-name {
-    margin-top: 10%;
-    font-size: 50px;
-  }
+
   .dice-3d {
-    transform: translate(-50%, -70%) scale(.7);
+    transform: translate(-50%, -50%) scale(.2);
   }
-  .btn-wrapper {
-    height: auto;
-    width: 60%;
-    top: 37vh;
-  }
-  .label {
-    width: 100%;
-    font-size: 35px;
-  }
-  i {
-    font-size: 55px;
-  }
-  .btn-new {
-    left: 25%;
-  }
-  .btn-info {
-    right: 10%;
-  }
-  .btn-hold {
-    margin-top: 50px;
-  }
-  .in-game {
-    display: flex;
-    align-items: center;
-  }
-  .current-score {
-    font-size: 40px;
-  }
+
   .welcome {
-    font-size: 25px;
+    font-size: 0.5em;
   }
-  .welcome-text-button {
-    width: 150px;
-    font-size: 15px;
-  }
-  p.label.win {
-    font-size: 45px; 
-  }
-  .unlucky {
-    font-size: 35px;
-  }
+} 
 /* Конец стилей для медиа запросов */

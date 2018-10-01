@@ -2,48 +2,64 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    
     <link rel="stylesheet" href="style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
     <title>Pig Dice Game</title>
   </head>
+
   <body class="background">
-    <div class="background__wrapper">
-      <img src="images/las-vegas.png" alt="Las Vegas Logo" class="las-vegas">
+
+    <div class="las-vegas_logo">
+      <img src="images/las-vegas.png" alt="Las-Vegas Logo">
     </div>
-    <div class="game-board">
-      <button type="button" class="btn-new in-game" id="new-game"><i class="ion-ios-plus-outline"></i><span class="label hide">New game</span>
-      <span class="label">Новая игра</span></button>
-      <button type="button" class="btn-info in-game" id="rules"><i class="ion-ios-information-outline"></i><span class="label hide">Rules</span>
-      <span class="label">Правила</span></button>
 
-      <div class="wrapper">
+    <div class="gameboard">
 
-        <div class="player-1 panel active">
-          <div class="player-name"><input type="text" value="Игрок 1" class="type-name" maxlength="12" id="player1"></input></div>
-          <div class="total-score"><span>0</span><p class="label winner-text-hide win">Победитель!</p><p class="label hide winner-text-hide win">Winner!</p> </div>
-          <div class="current-box">
-            <div class="current-label"><span class="label hide">Current</span><span class="label">Текущий ход</span></div>
-            <div class="current-score">0</div>
+      <div class="top_btn_wrapper">
+        <button type="button" class="button" id="new_game">
+          <i class="ion-ios-plus-outline"></i>Новая игра
+        </button>
+        <button type="button" class="button" id="rules">
+          <i class="ion-ios-information-outline"></i>Правила
+        </button>
+      </div>
+
+      <div class="panel_wrapper">
+
+        <div class="panel active" id="player1">
+          <div class="player_name">
+            <input type="text" value="Игрок 1" class="type_name" maxlength="12">
+          </div>
+          <div class="total_score">
+            0
+            <p class="winner_text_hide win">Победитель!</p>
+          </div>
+          <div class="current_box">
+            <div class="current_label">Текущий ход</div>
+            <div class="current_score">0</div>
           </div>
         </div>
 
-        <div class="player-2 panel">
-          <div class="player-name"><input type="text" value="Игрок 2" class="type-name" maxlength="12" id="player2"></input></div>
-          <div class="total-score"><span>0</span><p class="label winner-text-hide win">Победитель!</p><p class="label hide winner-text-hide win">Winner!</p>
+        <div class="panel" id="player2">
+          <div class="player_name"><input type="text" value="Игрок 2" class="type_name" maxlength="12"></div>
+          <div class="total_score">
+            0
+            <p class="winner_text_hide win">Победитель!</p>
           </div>
-          <div class="current-box">
-            <div class="current-label"><span class="label hide">Current</span><span class="label">Текущий ход</span></div>
-            <div class="current-score">0</div>
+          <div class="current_box">
+            <div class="current_label">Текущий ход</div>
+            <div class="current_score">0</div>
           </div>
         </div>
       </div>
 
-      <div class="btn-wrapper">
-          <p class="label unlucky roll-close hide">Unlucky! It's 1!</p>
-        <p class="label unlucky roll-close">Неудача! Выпало 1!</p>
-        <button type="button" class="btn-roll in-game"i id="roll"><i class="ion-ios-loop"></i><span class="label hide">Roll dice</span class="label"><span class="label">Бросить кубик</span></button>
-        <button type="button" class="btn-hold in-game" id="hold"><i class="ion-ios-download-outline"></i><span class="label  hide">Finish turn</span><span class="label">Закончить ход</span></button>
+      <div class="bottom_btn_wrapper">
+        <p class="unlucky roll_close">Неудача! Выпало 1!</p>
+        <button type="button" class="btn_roll button"i id="roll"><i class="ion-ios-loop"></i> Бросить кубик</button>
+        <button type="button" class="btn_hold button" id="hold"><i class="ion-ios-download-outline"></i>Закончить ход</button>
       </div>
 
       <div class="dice-3d">
@@ -58,7 +74,7 @@
       </div>
 
       <div class="welcome" id="welcome-div">
-        <div class="welcome-text">
+        <div class="welcome_text">
           <h1 class="title">Игра в кости.</h1>
             <p>Правила:<br>
             На каждый ход игрок бросает кости до тех пор, пока не выпадет 1 или игрок не решит "удержать" текущий счет броска и добавить его к общему счету.</p>
@@ -67,25 +83,10 @@
             <p>Если игрок выбирает "удержать" текущий счет, то счет текущего броска добавляется в общий счет и очередь переходит к другому игроку.</p>
             <p> Первый игрок, который набрал 100 или более побеждает.</p>
             <button type="button" class="ok" tabindex="1">ОК</button>
-            <button type="button" class="lang" tabindex="2">English</button>
-        </div>
-        <div class="welcome-text hide">
-          <h1 class="title">Pig Dice Game.</h1>
-          <p>
-            Rules: Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold": If the player rolls a 1, they score nothing and it becomes the next player's turn.
-          </p>
-          <p>
-            If the player rolls any other number, it is added to their turn total and the player's turn continues.
-          </p>
-          <p>
-            If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
-          </p>
-          <p>The first player to score 100 or more points wins.</p>
-          <button type="button" class="ok" tabindex="1">ОК</button>
-          <button type="button" class="lang" tabindex="2">Русский</button>
         </div>
       </div>
     </div>
+
     <script
   src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
   integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
