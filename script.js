@@ -16,16 +16,16 @@ $(() => {
       hideCls: "hide",
       panelCls: ".panel",
       activeCls: "active",
-      activeTtlScr: ".active .total-score span",
-      activeCurrScr: ".active .current-box .current-score",
+      activeTtlScr: ".active .total_score",
+      activeCurrScr: ".active .current_box .current_score",
       cube: ".cube",
       roll: "#roll",
       hold: "#hold",
       activeWinner: ".active .win",
       hideWinTxt: "winner-text-hide",
       unluckyDiv: ".unlucky",
-      closeRollBtn: "roll-close",
-      newGameBtn: "#new-game"
+      closeRollBtn: "roll_close",
+      newGameBtn: "#new_game"
     };
 
     return {
@@ -136,8 +136,8 @@ $(() => {
 
       allScoresToZero() {
         for (let i = 1; i <= $(dom.panelCls).length; i++) {
-          uiController.changeText(".player-" + i + " .total-score span", dataController.initScore);
-          uiController.changeText(".player-" + i + " .current-box .current-score", dataController.initScore);
+          uiController.changeText("#player" + i + " .total_score", dataController.initScore);
+          uiController.changeText("#player" + i + " .current_box .current_score", dataController.initScore);
         }
       },
 
@@ -242,7 +242,7 @@ $(() => {
 
         uiController.addClass(dom.unluckyDiv, dom.closeRollBtn);
         uiController.addClass(dom.activeWinner, dom.hideWinTxt);
-        $(".player-2").hasClass("active") ? uiController.toggleActivePlayer() : 0;
+        $("#player2").hasClass("active") ? uiController.toggleActivePlayer() : 0;
       });
     };
 
