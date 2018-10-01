@@ -313,7 +313,7 @@ i {
     Конец стилей для приветственного блока
 **********************************************/
 /* Спрятать ненужные блоки */
-.hide, .winner_texthide, .roll_close {
+.hide, .winner_text_hide, .roll_close {
   display: none;
 }
 
