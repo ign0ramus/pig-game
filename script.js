@@ -11,7 +11,6 @@ $(() => {
       okBtn: ".ok",
       welcomeDiv: "#welcome-div",
       rulesBtn: "#rules",
-      languageBtn: ".lang",
       btnLabel: ".label",
       hideCls: "hide",
       panelCls: ".panel",
@@ -177,10 +176,6 @@ $(() => {
       $(dom.okBtn).click(uiController.toggleHide(dom.welcomeDiv));
 
       $(dom.rulesBtn).click(uiController.toggleHide(dom.welcomeDiv));
-
-      $(dom.languageBtn).click(uiController.toggleHide(dom.btnLabel))
-      $(dom.languageBtn).click(uiController.toggleHide($(dom.welcomeDiv).children()));
-      $(dom.languageBtn).click(uiController.defaultNames);
 
       $(dom.roll).click(() => {
 
